@@ -87,6 +87,9 @@
       .lineTo(radius * 0.05, radius * 0.05)
       .closePath()
       .fill('red')
+      .stroke('black')
+      .plotCircle(0, 0, radius * 0.02, false, 'black')
+      .fill('grey')
       .stroke('black');
 
     rotation += velocity;
