@@ -33,11 +33,16 @@
     var height = window.innerHeight;
     var radius = Math.min(width, height) * 0.4;
 
+    var currentIndex = (items.length - 1) - Math.floor(((rotation) % 360) / (360 / items.length));
+
     canvas
       .setSize(width, height)
       .setFontFamily('arial')
       .setFill('black')
       .setStroke('black')
+      .setStrokeWidth(1)
+      .setStrokeCap('round')
+      .setStrokeJoin('round')
       .setTextAlign('end')
       .setTextBaseline('middle')
       .setFontSize(radius * 0.1)
@@ -54,7 +59,9 @@
           .fill(canvas.createHSL((index * 100) % 360, 80, 70))
           .stroke()
           .rotate(Math.PI * 2 / items.length * 0.5)
-          .fillText(value, radius * 0.9, 0, undefined, 'black')
+          .setStrokeWidth(6)
+          .strokeText(value, radius * 0.9, 0, undefined, currentIndex === index ? 'black' : 'transparent')
+          .fillText(value, radius * 0.9, 0, undefined, currentIndex === index ? 'white' : 'black')
           .restore()
           .rotate(Math.PI * 2 / items.length);
       })
