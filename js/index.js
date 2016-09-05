@@ -123,7 +123,6 @@
   }
 
   function resize () {
-    canvas.setSize(window.innerWidth, window.innerHeight);
     raf = window.requestAnimationFrame(draw);
   }
 
