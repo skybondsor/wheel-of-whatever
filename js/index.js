@@ -9,13 +9,17 @@
   var raf;
 
   var items = [
-    'AngularJS',
-    'ReactJS',
-    'ImmutableJS',
-    'CSS Pre-Processors',
-    'Hybrid Apps',
-    'SOA',
-    'DJango'
+    'Banana',
+    'Orange',
+    'Apple',
+    'Pear',
+    'Peach',
+    'Kiwi',
+    'Melon',
+    'Plum',
+    'Apricot',
+    'Grape',
+    'Cherry'
   ];
 
   var velocity = 0;
@@ -36,7 +40,7 @@
       .setStroke('black')
       .setTextAlign('end')
       .setTextBaseline('middle')
-      .setFontSize(radius / items.length * 0.5)
+      .setFontSize(radius * 0.1)
       .translate(width / 2, height / 2)
       .save()
       .rotate(canvas.getRadiansFromDegrees(rotation))
