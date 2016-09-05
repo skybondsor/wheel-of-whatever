@@ -99,7 +99,7 @@
     rotation += velocity;
     velocity *= 0.99;
 
-    if (velocity >= 0.1 || triangleRotation <= -0.1) {
+    if (velocity >= 0.05 || triangleRotation <= -0.1) {
       raf = window.requestAnimationFrame(draw);
     } else {
       velocity = 0;
