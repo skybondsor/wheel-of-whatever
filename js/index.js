@@ -18,7 +18,7 @@ function updateWheel(){
     window.cancelAnimationFrame(raf);
 
     var width = window.innerWidth;
-    var height = window.innerHeight;
+    var height = window.innerWidth;
     var radius = Math.min(width, height) * 0.4;
 
     var currentIndex = (items.length - 1) - Math.floor(((rotation) % 360) / (360 / items.length));
@@ -108,7 +108,7 @@ function updateWheel(){
     }
 
     var width = window.innerWidth;
-    var height = window.innerHeight;
+    var height = window.innerWidth;
     var radius = Math.min(width, height) * 0.4;
 
     if (canvas.getDistance(event.clientX, event.clientY, width / 2, height / 2) <= radius) {
