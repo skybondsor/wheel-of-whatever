@@ -2,25 +2,13 @@
 
 'use strict';
 
-(function () {
+function updateWheel(){
 
   var element = document.getElementById('canvas');
   var canvas = new Canvasimo(element);
   var raf;
 
-  var items = [
-    'Banana',
-    'Orange',
-    'Apple',
-    'Pear',
-    'Peach',
-    'Kiwi',
-    'Melon',
-    'Plum',
-    'Apricot',
-    'Grape',
-    'Cherry'
-  ];
+  var items = document.getElementById("wheelItems").value.split(',');
 
   var velocity = 0;
   var rotation = 360 - (360 / items.length / 2);
@@ -141,4 +129,4 @@
 
   init();
 
-})();
+}
