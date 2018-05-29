@@ -3,6 +3,9 @@
 'use strict';
 
 window.onload = function(){
+  var items = localStorage.getItem('items');
+  document.getElementById("wheelItems").value = items;
+  
   updateWheel();
 }
 
@@ -14,8 +17,10 @@ function updateWheel(){
   var canvas = new Canvasimo(element);
   var raf;
 
+  localStorage.setItem('items',document.getElementById("wheelItems").value);
+  
   var items = document.getElementById("wheelItems").value.split(',');
-
+  
   var velocity = 0;
   var rotation = 360 - (360 / items.length / 2);
   var triangleRotation = 0;
