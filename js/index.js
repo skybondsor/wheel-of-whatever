@@ -2,6 +2,10 @@
 
 'use strict';
 
+window.onload = function(){
+  updateWheel();
+}
+
 function updateWheel(){
 
   var element = document.getElementById('canvas');
