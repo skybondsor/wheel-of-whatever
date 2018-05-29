@@ -117,8 +117,19 @@ function updateWheel(){
   }
 
   function onClick (event) {
+    if (event.touches && event.touches.length) {
+      event.clientX = event.touches[0].clientX;
+      event.clientY = event.touches[0].clientY;
+    }
+
+    var width = window.innerWidth < 640 ? window.innerWidth : 640;
+    var height = window.innerWidth < 640 ? window.innerWidth : 640;
+    var radius = Math.min(width, height) * 0.4;
+
+    if (canvas.getDistance(event.clientX, event.clientY, width / 2, height / 2) <= radius) {
       velocity = 10 + (Math.random() * 40);
       raf = window.requestAnimationFrame(draw);
+    }
   }
 
   function resize () {
