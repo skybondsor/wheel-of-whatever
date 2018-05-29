@@ -30,8 +30,8 @@ function updateWheel(){
   function draw () {
     window.cancelAnimationFrame(raf);
 
-    var width = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
-    var height = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+    var width = window.innerWidth < 640 ? window.innerWidth : 640;
+    var height = window.innerWidth < 640 ? window.innerWidth : 640;
     var radius = Math.min(width, height) * 0.4;
 
     var currentIndex = (items.length - 1) - Math.floor(((rotation) % 360) / (360 / items.length));
