@@ -30,8 +30,6 @@ function updateWheel(){
   function draw () {
     window.cancelAnimationFrame(raf);
 
-    items = localStorage.getItem('items').split(',');
-
     var width = window.innerWidth < 640 ? window.innerWidth : 640;
     var height = window.innerWidth < 640 ? window.innerWidth : 640;
     var radius = Math.min(width, height) * 0.4;
