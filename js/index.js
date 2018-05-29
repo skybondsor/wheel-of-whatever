@@ -9,6 +9,8 @@ window.onload = function(){
 function updateWheel(){
 
   var element = document.getElementById('canvas');
+      element.removeEventListener('click', onClick);
+  
   var canvas = new Canvasimo(element);
   var raf;
 
