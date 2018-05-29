@@ -12,12 +12,20 @@ window.onload = function(){
 }
 
 function updateWheel(){
+  
+  localStorage.setItem('items',document.getElementById("wheelItems").value);
 
   var element = document.getElementById('canvas');
       element.removeEventListener('click', onClick);
   
   var canvas = new Canvasimo(element);
-  var raf, items, velocity = 0, triangleRotation = 0, rotation = 360 - (360 / items.length / 2);
+  var raf; 
+  
+  var items = localStorage.getItem('items').split(',');
+
+  var velocity = 0; 
+  var rotation = 360 - (360 / items.length / 2);
+  var triangleRotation = 0;
 
   function draw () {
     window.cancelAnimationFrame(raf);
