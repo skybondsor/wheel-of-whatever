@@ -29,10 +29,8 @@ function updateWheel(){
 
   function draw () {
     window.cancelAnimationFrame(raf);
-    
-    localStorage.setItem('items',document.getElementById("wheelItems").value);
 
-    items = document.getElementById("wheelItems").value.split(',');
+    items = localStorage.getItem('items').split(',');
 
     var width = window.innerWidth < 640 ? window.innerWidth : 640;
     var height = window.innerWidth < 640 ? window.innerWidth : 640;
