@@ -130,7 +130,7 @@ function updateWheel(){
   function init () {
     resize();
     window.addEventListener('resize', resize);
-    element.addEventListener('click', onClick);
+    document.getElementById('spinWheel').addEventListener('click', onClick);
   }
 
   init();
