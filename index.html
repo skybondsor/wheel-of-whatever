@@ -10,13 +10,14 @@
   <ol>
     <li>Enter a comma-delimted list of options below, e.g. "apples, oranges, peaches, pears, bananas, grapes, pineapple, strawberries".</li>
     <li>Click "Draw Wheel" to draw a spinnable wheel of options.</li>
-    <li>Click the wheel to spin it.</li>
+    <li>Click "Spin Wheel" to spin it.</li>
   </ol> 
   
   <textarea id="wheelItems" cols="50" rows="5">Banana, Orange, Apple, Pear, Peach, Kiwi, Melon, Plum, Apricot, Grape, Cherry</textarea><br />
   <button id="updateWheel" type="submit" onclick="updateWheel(); return false;" >Draw Wheel »</button>
 
-  <canvas id="canvas" width="1280" height="720"></canvas>
+  <canvas id="canvas" width="1280" height="720"></canvas><br />
+  <button id="spinWheel" type="submit">Spin Wheel</button>
 
   <script type="text/javascript" src="js/canvasimo.js"></script>
   <script type="text/javascript" src="js/raf.js"></script>
