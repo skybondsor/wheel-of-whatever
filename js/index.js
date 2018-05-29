@@ -17,8 +17,7 @@ function updateWheel(){
       element.removeEventListener('click', onClick);
   
   var canvas = new Canvasimo(element);
-  var raf, items, velocity, rotation, triangleRotation;
-
+  var raf, items, velocity = 0, triangleRotation = 0, rotation = 360 - (360 / items.length / 2);
 
   function draw () {
     window.cancelAnimationFrame(raf);
@@ -26,10 +25,6 @@ function updateWheel(){
     localStorage.setItem('items',document.getElementById("wheelItems").value);
 
     items = document.getElementById("wheelItems").value.split(',');
-
-    velocity = 0;
-    rotation = 360 - (360 / items.length / 2);
-    triangleRotation = 0;
 
     var width = window.innerWidth < 640 ? window.innerWidth : 640;
     var height = window.innerWidth < 640 ? window.innerWidth : 640;
