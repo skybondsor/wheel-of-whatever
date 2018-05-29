@@ -4,7 +4,9 @@
 
 window.onload = function(){
   var items = localStorage.getItem('items');
-  document.getElementById("wheelItems").value = items;
+  if ( items && items.length > 0 ){
+    document.getElementById("wheelItems").value = items;
+  }
   
   updateWheel();
 }
