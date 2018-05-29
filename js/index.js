@@ -17,18 +17,19 @@ function updateWheel(){
       element.removeEventListener('click', onClick);
   
   var canvas = new Canvasimo(element);
-  var raf;
+  var raf, items, velocity, rotation, triangleRotation;
 
-  localStorage.setItem('items',document.getElementById("wheelItems").value);
-  
-  var items = document.getElementById("wheelItems").value.split(',');
-  
-  var velocity = 0;
-  var rotation = 360 - (360 / items.length / 2);
-  var triangleRotation = 0;
 
   function draw () {
     window.cancelAnimationFrame(raf);
+    
+    localStorage.setItem('items',document.getElementById("wheelItems").value);
+
+    items = document.getElementById("wheelItems").value.split(',');
+
+    velocity = 0;
+    rotation = 360 - (360 / items.length / 2);
+    triangleRotation = 0;
 
     var width = window.innerWidth < 640 ? window.innerWidth : 640;
     var height = window.innerWidth < 640 ? window.innerWidth : 640;
