@@ -7,17 +7,21 @@
 </head>
 <body>
   
-  <ol>
-    <li>Enter a comma-delimted list of options below, e.g. "apples, oranges, peaches, pears, bananas, grapes, pineapple, strawberries".</li>
-    <li>Click "Draw Wheel" to draw a spinnable wheel of options.</li>
-    <li>Click wheel to spin it.</li>
-  </ol> 
-  
-  <textarea id="wheelItems" cols="50" rows="5">Banana, Orange, Apple, Pear, Peach, Kiwi, Melon, Plum, Apricot, Grape, Cherry</textarea><br />
-  <button id="updateWheel" onclick="updateWheel(); return false;" >Draw Wheel »</button>
+  <div class="centerer">
 
-  <canvas id="canvas" width="1280" height="720"></canvas>
+    <ol>
+      <li>Enter a comma-delimted list of options below, e.g. "apples, oranges, peaches, pears, bananas, grapes, pineapple, strawberries".</li>
+      <li>Click "Draw Wheel" to draw a spinnable wheel of options.</li>
+      <li>Click wheel to spin it.</li>
+    </ol> 
 
+    <textarea id="wheelItems" cols="50" rows="5">Banana, Orange, Apple, Pear, Peach, Kiwi, Melon, Plum, Apricot, Grape, Cherry</textarea><br />
+    <button id="updateWheel" onclick="updateWheel(); return false;" >Draw Wheel »</button>
+
+    <canvas id="canvas" width="1280" height="720"></canvas>
+
+  </div>
+    
   <script type="text/javascript" src="js/canvasimo.js"></script>
   <script type="text/javascript" src="js/raf.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
