@@ -11,8 +11,8 @@ body {
 
 canvas {
   display: block;
-  width: 100vw;
-  height: 100vw;
+  width: 100vw; max-width: 640px;
+  height: 100vw; max-height: 640px; 
 }
 
 ol, textarea { width: 100%; max-width: 640px; }
