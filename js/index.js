@@ -19,9 +19,17 @@ function updateWheel(){
   var newItems = document.getElementById("wheelItems").value;
   localStorage.setItem('items',newItems);
 
-  var element = document.getElementById('canvas');
-      element.removeEventListener('click', onClick);
-  
+  var container = document.querySelector('.centerer');
+
+  var oldC = document.getElementById('canvas');
+  oldC.parentNode.removeChild(oldC);
+
+  var element = document.createElement('canvas');
+  element.id = "canvas";
+  element.width = 640;
+  element.height = 640;
+  container.appendChild(element);
+
   var canvas = new Canvasimo(element);
   var raf; 
   
