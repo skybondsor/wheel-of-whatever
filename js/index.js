@@ -5,7 +5,10 @@
 window.onload = function(){
   var items = localStorage.getItem('items');
   if ( items && items.length > 0 ){
-    document.getElementById("wheelItems").value = items;
+    var textarea = document.getElementById("wheelItems");
+    textarea.value = items;
+    textarea.innerHTML = items;
+    textarea.innerText = items;
   }
   
   updateWheel();
@@ -13,7 +16,8 @@ window.onload = function(){
 
 function updateWheel(){
   
-  localStorage.setItem('items',document.getElementById("wheelItems").value);
+  var newItems = document.getElementById("wheelItems").value;
+  localStorage.setItem('items',newItems);
 
   var element = document.getElementById('canvas');
       element.removeEventListener('click', onClick);
